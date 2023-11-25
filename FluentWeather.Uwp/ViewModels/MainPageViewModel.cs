@@ -23,14 +23,14 @@ public partial class MainPageViewModel : ObservableObject
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(HourlyForecasts24H))]
-    private List<WeatherBase> hourlyForecasts = new();
-    public List<WeatherBase> HourlyForecasts24H => (HourlyForecasts.Count < 24) ? HourlyForecasts.GetRange(0, HourlyForecasts.Count) : HourlyForecasts.GetRange(0, 24);
+    private List<WeatherHourlyBase> hourlyForecasts = new();
+    public List<WeatherHourlyBase> HourlyForecasts24H => (HourlyForecasts.Count < 24) ? HourlyForecasts.GetRange(0, HourlyForecasts.Count) : HourlyForecasts.GetRange(0, 24);
 
     [ObservableProperty]
     private List<WeatherWarningBase> warnings ;
 
     [ObservableProperty]
-    private WeatherBase weatherNow;
+    private WeatherNowBase weatherNow;
 
     [ObservableProperty]
     private string weatherDescription;

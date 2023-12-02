@@ -125,7 +125,16 @@ public class Settings:INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
-    public int CrashCount
+    public bool AutoCheckUpdates
+    {
+        get => GetSettings(nameof(AutoCheckUpdates), true);
+        set
+        {
+            ApplicationData.Current.LocalSettings.Values[nameof(AutoCheckUpdates)] = value;
+            OnPropertyChanged();
+        }
+    }
+    public bool IsAcrylicEnabled
     {
         get => GetSettings(nameof(CrashCount), 0);
         set

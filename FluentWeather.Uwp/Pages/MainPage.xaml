@@ -29,10 +29,11 @@
         </converters:ValueConverterGroup>
     </Page.Resources>
     <Grid>
-        <Border
-            Canvas.ZIndex="2"
-            Visibility="{x:Bind ViewModel.IsLoading, Mode=OneWay}">
-            <ProgressRing Width="100" Height="100" IsActive="True"/>
+        <Border Canvas.ZIndex="2" Visibility="{x:Bind ViewModel.IsLoading, Mode=OneWay}">
+            <ProgressRing
+                Width="100"
+                Height="100"
+                IsActive="True" />
         </Border>
 
         <ScrollViewer
@@ -271,7 +272,10 @@
                 </Grid>
 
                 <!--  7天天气预报  -->
-                <Grid x:Name="DailyGridDesktop" Grid.Row="3" Visibility="Collapsed">
+                <Grid
+                    x:Name="DailyGridDesktop"
+                    Grid.Row="3"
+                    Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -347,16 +351,19 @@
                         WeatherForecasts="{Binding DailyForecasts7D}" />
                 </Grid>
                 <Grid x:Name="DailyGridPhone" Grid.Row="3">
-                    <ListView ItemsSource="{x:Bind ViewModel.DailyForecasts7D, Mode=OneWay}" SelectionMode="None">
+                    <ListView
+                        IsItemClickEnabled="True"
+                        ItemsSource="{x:Bind ViewModel.DailyForecasts7D, Mode=OneWay}"
+                        SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:WeatherBase">
                                 <Grid>
                                     <StackPanel Orientation="Horizontal">
                                         <Image
                                             Height="32"
-                                            Visibility="Collapsed"
                                             VerticalAlignment="Center"
-                                            Source="{x:Bind WeatherType, Converter={StaticResource WeatherTypeToIconConverter}}" />
+                                            Source="{x:Bind WeatherType, Converter={StaticResource WeatherTypeToIconConverter}}"
+                                            Visibility="Collapsed" />
                                         <FontIcon
                                             FontFamily="{StaticResource WeatherIconFont}"
                                             FontSize="28"
@@ -375,12 +382,12 @@
                                             Text="{x:Bind Description}" />
                                     </StackPanel>
                                     <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
-                                        <TextBlock FontWeight="SemiBold" FontSize="17">
-                                            <Run Text="{Binding MinTemperature}"/><Run Text="° /"/>
-                                            <Run Text="{Binding MaxTemperature}"/><Run Text="°"/>
+                                        <TextBlock FontSize="20">
+                                            <Run FontWeight="SemiBold" Text="{Binding MaxTemperature}" /><Run Text="° " />
+                                            <Run Foreground="{ThemeResource SystemControlForegroundBaseMediumBrush}" Text="{Binding MinTemperature}" /><Run Foreground="{ThemeResource SystemControlForegroundBaseMediumBrush}" Text="°" />
                                         </TextBlock>
                                     </StackPanel>
-                                    <Grid Width="1000"/>
+                                    <Grid Width="1000" />
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>

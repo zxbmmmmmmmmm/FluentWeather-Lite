@@ -22,11 +22,6 @@ using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using FluentWeather.Uwp.Helpers.Update;
-using Windows.ApplicationModel;
-using CommunityToolkit.WinUI.Helpers;
-using Windows.System;
-using Microsoft.AppCenter.Analytics;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 

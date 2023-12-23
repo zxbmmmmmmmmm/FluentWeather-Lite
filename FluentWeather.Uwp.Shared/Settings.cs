@@ -116,15 +116,6 @@ public class Settings:INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
-    public bool IsAcrylicEnabled
-    {
-        get => GetSettings(nameof(IsAcrylicEnabled), Environment.OSVersion.Version.Build < 21996);//Win10下默认开启
-        set
-        {
-            ApplicationData.Current.LocalSettings.Values[nameof(IsAcrylicEnabled)] = value;
-            OnPropertyChanged();
-        }
-    }
     public bool AutoCheckUpdates
     {
         get => GetSettings(nameof(AutoCheckUpdates), true);
@@ -134,7 +125,7 @@ public class Settings:INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
-    public bool IsAcrylicEnabled
+    public int CrashCount
     {
         get => GetSettings(nameof(CrashCount), 0);
         set

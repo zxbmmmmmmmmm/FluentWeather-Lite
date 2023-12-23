@@ -15,7 +15,6 @@
     mc:Ignorable="d">
 
     <Grid Margin="0,0,0,0">
-        <Border Visibility="{x:Bind app:Common.Settings.IsAcrylicEnabled, Mode=OneWay}" />
         <Grid
             x:Name="TitleGrid"
             VerticalAlignment="Top"

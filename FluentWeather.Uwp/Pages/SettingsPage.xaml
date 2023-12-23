@@ -21,6 +21,7 @@
             <settings:LocationSettingSection/>
             <settings:NotificationSettingSection Margin="0,20,0,0"/>
             <settings:PersonalizationSettingSection   Margin="0,20,0,0" />
+            <settings:UpdateSettingSection   Margin="0,20,0,0" />
             <settings:QWeatherSettingSection Margin="0,24,0,0"/>
         </StackPanel>
     </ScrollViewer>

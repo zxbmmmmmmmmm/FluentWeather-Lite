@@ -62,6 +62,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
+
                 <!--  当前天气  -->
                 <Grid Margin="0,16,0,12" x:DefaultBindMode="OneWay">
                     <StackPanel HorizontalAlignment="Center">
@@ -267,7 +268,32 @@
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                             </Style>
                         </ListView.ItemContainerStyle>
+                        <ListView.Header>
+                            <Button
+                                x:Name="UpdateBtn"
+                                Margin="12,0,12,0"
+                                Padding="10,8"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch"
+                                VerticalContentAlignment="Center"
+                                Background="Transparent"
+                                Click="UpdateBtn_Click"
+                                Visibility="Collapsed">
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontSize="14" Glyph="&#xE74A;" />
+                                    <TextBlock
+                                        Margin="8,0,0,0"
+                                        HorizontalAlignment="Left"
+                                        Text="更新可用" />
+                                    <TextBlock
+                                        x:Name="UpdateVersionText"
+                                        Margin="8,0,0,0"
+                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                                </StackPanel>
+                            </Button>
+                        </ListView.Header>
                     </ListView>
+
 
                 </Grid>
 

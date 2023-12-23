@@ -17,9 +17,9 @@ public partial class MainPageViewModel : ObservableObject
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(DailyForecasts7D))]
     [NotifyPropertyChangedFor(nameof(DailyForecasts5D))]
-    private List<WeatherBase> dailyForecasts =new();
-    public List<WeatherBase> DailyForecasts7D => (DailyForecasts.Count < 7) ? DailyForecasts.GetRange(0, DailyForecasts.Count) : DailyForecasts.GetRange(0, 7);
-    public List<WeatherBase> DailyForecasts5D => (DailyForecasts.Count < 5) ? DailyForecasts.GetRange(0, DailyForecasts.Count) : DailyForecasts.GetRange(0, 5);
+    private List<WeatherDailyBase> dailyForecasts =new();
+    public List<WeatherDailyBase> DailyForecasts7D => (DailyForecasts.Count < 7) ? DailyForecasts.GetRange(0, DailyForecasts.Count) : DailyForecasts.GetRange(0, 7);
+    public List<WeatherDailyBase> DailyForecasts5D => (DailyForecasts.Count < 5) ? DailyForecasts.GetRange(0, DailyForecasts.Count) : DailyForecasts.GetRange(0, 5);
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(HourlyForecasts24H))]

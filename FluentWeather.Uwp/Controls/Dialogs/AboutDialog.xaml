@@ -82,7 +82,7 @@
             </StackPanel>
 
             <StackPanel Margin="0,-4,0,0" Orientation="Horizontal">
-                <HyperlinkButton NavigateUri="https://github.com/zxbmmmmmmmmm/FluentWeather">
+                <HyperlinkButton NavigateUri="https://github.com/zxbmmmmmmmmm/FluentWeather-Lite">
                     <StackPanel Orientation="Horizontal">
                         <PathIcon
                             Margin="0,-2,0,0"

@@ -89,7 +89,7 @@ public class WeatherFontIconConverter : IValueConverter
             case WeatherType.VeryCloudy:
                 return "\uE9BF";
             case WeatherType.Fog:
-                return "Fog.png";
+                return "\uE9EA";
             case WeatherType.HeavyShowers:
             case WeatherType.LightShowers:
                 return "\uEA0D";
